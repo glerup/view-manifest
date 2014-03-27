@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! $# -eq 1 ]
+then
+    echo "Usage: view-manifest JAR"
+    exit 1
+fi
+
+exec unzip -p "$1" "META-INF/MANIFEST.MF"
